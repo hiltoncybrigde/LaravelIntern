@@ -114,7 +114,13 @@
       </div>
                 <td>{{$post->des}}</td>
                 <td>{{$post->category}}</td>
+                @auth
+        @if(Auth::user()->id ==$user->id)
                 <td><a href="/d/{{$post->id}}" > delete</a></td>
+                @endif
+        @else
+        <td></td>
+        @endauth
             </tr>
             @endforeach
         </tbody>
