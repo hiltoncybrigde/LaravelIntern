@@ -23,17 +23,21 @@ class PostController extends Controller
       ]);
 
 
-      
 
       auth()->user()->posts()->create([
         'title' => $data['title'],
         'des' => $data['des'],
         'category' => $data['category'],
-
       ]);
 
       return redirect('/profile/' . auth()->user()->id);
 
+    }
+    public function show(\App\Post $post)
+    {
+      return view('post.show',[
+        'post' => $post,
+      ]);
     }
     public function show(\App\Post $post)
     {

@@ -60,9 +60,18 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-                                    <a class="dropdown-item" href="/profile/{{Auth::user()->id}}">profile</a>
+                                    <a class="dropdown-item" href="/profile/{{Auth::user()->id}}">Profile</a>
+                                    <div class="dropdown-divider"></div>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    <a class="dropdown-item" href="/kid">For kid</a>
+
+                                    
+                                    <a class="dropdown-item" href="/adult">For adult</a>
+
+                                    
+                                    <a class="dropdown-item" href="/millennials">for millennials</a>
+
+                                    
                                         @csrf
                                     </form>
                                 </div>

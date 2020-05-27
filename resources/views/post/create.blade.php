@@ -25,8 +25,6 @@
           @endif
         </div>
 
-
-
         <div class="md-form mb-5">
           <i class="fas fa-envelope prefix grey-text"></i>
           <input id="des" type="des" class="form-control{{ $errors->has('des') ? ' is-invalid' : '' }}" name="des" value="{{ old('des') }}" required>
@@ -40,12 +38,13 @@
 
 
         <div class="md-form mb-5">
-          <select class="browser-default custom-select">
-             <option selected>Open this select menu</option>
-             <option value="1">kid</option>
-             <option value="2">millennials</option>
-             <option value="3">adult</option>
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <select id="category" type="category" name="category" class="browser-default custom-select">
+             <option value="kid">kid</option>
+             <option value="millennials">millennials</option>
+             <option value="adult">adult</option>
           </select>
+          <label data-error="wrong" data-success="right" for="defaultForm-email">{{ __('Category') }}</label>
         </div>
 
       </div>

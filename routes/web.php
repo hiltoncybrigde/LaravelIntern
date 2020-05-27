@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
+use App\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,3 +28,7 @@ Route::patch('/profile/{user}','ProfileController@update')->name('profile.update
 Route::get('/p/create', 'PostController@create');
 Route::post('/p', 'PostController@store');
 Route::get('/p/{post}', 'PostController@show');
+Route::get('/kid', 'CategoryController@kidshow')->name('category.kid');
+Route::get('/adult', 'CategoryController@adultshow')->name('category.adult');
+Route::get('/millennials', 'CategoryController@millennialsshow')->name('category.millennials');
+
