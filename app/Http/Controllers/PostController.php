@@ -19,6 +19,7 @@ class PostController extends Controller
       $data = request()->validate([
         'title' => 'required',
         'des' => 'required',
+        'category' => 'required',
       ]);
 
 
@@ -27,6 +28,7 @@ class PostController extends Controller
       auth()->user()->posts()->create([
         'title' => $data['title'],
         'des' => $data['des'],
+        'category' => $data['category'],
 
       ]);
 

@@ -41,9 +41,9 @@
 
 
         <div class="d-flex">
-        <div class="font-weight-bold">{{$user->title ?? 'N/A'}}</div>
-        <div>{{$user->des ??'N/A'}}</div>
-        <div><a href="#">{{$user->url ?? 'N/A'}}</a></div>
+        <div class="font-weight-bold">{{$user->title}}</div>
+        <div>{{$user->des}}</div>
+        <div><a href="#">{{$user->url}}</a></div>
         @guest
         <div class="">
 

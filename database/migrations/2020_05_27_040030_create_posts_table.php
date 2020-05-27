@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('title');
             $table->text('des');
+            $table->enum('category', array('adult','millennials', 'kid'));   
             $table->timestamps();
 
             $table->index('user_id');

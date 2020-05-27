@@ -39,6 +39,15 @@
         </div>
 
 
+        <div class="md-form mb-5">
+          <select class="browser-default custom-select">
+             <option selected>Open this select menu</option>
+             <option value="1">kid</option>
+             <option value="2">millennials</option>
+             <option value="3">adult</option>
+          </select>
+        </div>
+
       </div>
       <div class="modal-footer d-flex justify-content-center">
         <button class="btn btn-default">Post</button>
