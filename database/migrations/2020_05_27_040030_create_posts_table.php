@@ -22,7 +22,6 @@ class CreatePostsTable extends Migration
             $table->timestamps();
 
             $table->index('user_id');
-            $table->timestamps();
         });
     }
 
