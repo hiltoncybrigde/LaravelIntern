@@ -30,7 +30,7 @@
         @auth
         @if(Auth::user()->id ==$user->id)
         <div class="">
-          <a href="/profile/{{$user->id}}/edit" data-toggle="modal" data-target="#modalEdit">edit </a>
+          <a href="/profile/{{$user->id}}/edit">edit </a>
         </div>
         @endif
         @else
