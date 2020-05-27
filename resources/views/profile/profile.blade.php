@@ -114,6 +114,7 @@
       </div>
                 <td>{{$post->des}}</td>
                 <td>{{$post->category}}</td>
+                <td><a href="/d/{{$post->id}}" > delete</a></td>
             </tr>
             @endforeach
         </tbody>

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -21,8 +21,7 @@ class PostController extends Controller
         'des' => 'required',
         'category' => 'required',
       ]);
-
-
+  
 
       auth()->user()->posts()->create([
         'title' => $data['title'],
@@ -39,10 +38,12 @@ class PostController extends Controller
         'post' => $post,
       ]);
     }
-    public function show(\App\Post $post)
-    {
-      return view('post.show',[
-        'post' => $post,
-      ]);
-    }
+
+public function delete($post)
+  {
+    $post = Post::findOrFail($post);
+    $post->delete();
+      return redirect()->back();
+  }
+    
 }

@@ -31,4 +31,4 @@ Route::get('/p/{post}', 'PostController@show');
 Route::get('/kid', 'CategoryController@kidshow')->name('category.kid');
 Route::get('/adult', 'CategoryController@adultshow')->name('category.adult');
 Route::get('/millennials', 'CategoryController@millennialsshow')->name('category.millennials');
-
+Route::get('/d/{post}', 'PostController@delete');
